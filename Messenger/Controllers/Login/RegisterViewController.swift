@@ -19,6 +19,9 @@ class RegisterViewController: UIViewController {
     imageView.image = UIImage(systemName: "person.fill")
     imageView.tintColor = .gray
     imageView.contentMode = .scaleAspectFit
+    imageView.layer.masksToBounds = true
+    imageView.layer.borderWidth = 2
+    imageView.layer.borderColor = UIColor.lightGray.cgColor
     return imageView
   }()
 
@@ -133,6 +136,9 @@ class RegisterViewController: UIViewController {
                              y: 20,
                              width: size,
                              height: size)
+
+    imageView.layer.cornerRadius = imageView.width / 2.0
+
     firstNameField.frame = CGRect(x: 30,
                               y: imageView.bottom + 10,
                               width: scrollView.width - 60,
@@ -228,9 +234,10 @@ extension RegisterViewController: UIImagePickerControllerDelegate, UINavigationC
 
   internal func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
     picker.dismiss(animated: true, completion: nil)
-    print(info)
+    // get edited image
+    guard let selectedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage else { return }
 
-    // self.imageView = selectedImage
+    self.imageView.image = selectedImage
   }
 
   func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
