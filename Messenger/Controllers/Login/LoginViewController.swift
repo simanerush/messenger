@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class LoginViewController: UIViewController {
 
@@ -124,7 +125,9 @@ class LoginViewController: UIViewController {
       return
     }
 
-    // TODO: firebase log in
+    FirebaseAuth.Auth.auth().signIn(withEmail: email, password: password, completion: { authResult, error in
+      
+    })
   }
 
   @objc private func didTapRegister() {

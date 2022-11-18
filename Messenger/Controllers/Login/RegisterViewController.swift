@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class RegisterViewController: UIViewController {
 
@@ -124,6 +125,8 @@ class RegisterViewController: UIViewController {
 
     let gesture = UITapGestureRecognizer(target: self, action: #selector(didTapChangeProfilePic))
     imageView.addGestureRecognizer(gesture)
+    
+    registerButton.addTarget(self, action: #selector(didTapRegisterButton), for: .touchUpInside)
   }
 
   override func viewDidLayoutSubviews() {
@@ -172,7 +175,16 @@ class RegisterViewController: UIViewController {
       return
     }
 
-    // TODO: firebase log in
+    // Firebase log in
+    FirebaseAuth.Auth.auth().createUser(withEmail: email, password: password, completion: { authResult, error in
+      guard let result = authResult, error == nil else {
+        print("error creating user")
+        return
+      }
+      
+      let user = result.user
+      print("created uesr:\(user)")
+    })
   }
 
   @objc private func didTapChangeProfilePic() {
