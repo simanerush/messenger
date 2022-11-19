@@ -23,6 +23,7 @@
 		231915D929236F5000B29B03 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 231915D829236F5000B29B03 /* GoogleService-Info.plist */; };
 		238015E6291E33A200B67B37 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238015E5291E33A200B67B37 /* Extensions.swift */; };
 		238015E8291E3B9600B67B37 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238015E7291E3B9600B67B37 /* Constants.swift */; };
+		23AE0DB22928C8A7002476DF /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AE0DB12928C8A7002476DF /* DatabaseManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		231915D829236F5000B29B03 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		238015E5291E33A200B67B37 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		238015E7291E3B9600B67B37 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		23AE0DB12928C8A7002476DF /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		B0053B525E4014633D53C20C /* Pods-Messenger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Messenger.debug.xcconfig"; path = "Target Support Files/Pods-Messenger/Pods-Messenger.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -135,6 +137,7 @@
 				23084BC4291C81B2007941F7 /* SceneDelegate.swift */,
 				238015E5291E33A200B67B37 /* Extensions.swift */,
 				238015E7291E3B9600B67B37 /* Constants.swift */,
+				23AE0DB12928C8A7002476DF /* DatabaseManager.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 				23084BE3291C8575007941F7 /* VideoPlayerViewController.swift in Sources */,
 				238015E6291E33A200B67B37 /* Extensions.swift in Sources */,
 				23084BC3291C81B2007941F7 /* AppDelegate.swift in Sources */,
+				23AE0DB22928C8A7002476DF /* DatabaseManager.swift in Sources */,
 				23084BE7291C85A5007941F7 /* ProfileViewController.swift in Sources */,
 				23084BC5291C81B2007941F7 /* SceneDelegate.swift in Sources */,
 				23084BE1291C8567007941F7 /* PhotoViewerViewController.swift in Sources */,

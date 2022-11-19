@@ -124,9 +124,21 @@ class LoginViewController: UIViewController {
       alertUserLoginError()
       return
     }
-
-    FirebaseAuth.Auth.auth().signIn(withEmail: email, password: password, completion: { authResult, error in
+    
+    // weak self is needed for not causing a retention cycle when a view is dismissed
+    FirebaseAuth.Auth.auth().signIn(withEmail: email, password: password, completion: { [weak self] authResult, error in
+      guard let strongSelf = self else {
+        return
+      }
       
+      guard let result = authResult, error == nil else {
+        print("failed to log in user with email \(email)!")
+        return
+      }
+      
+      let user = result.user
+      print("logged in \(user)")
+      strongSelf.navigationController?.dismiss(animated: true, completion: nil)
     })
   }
 
@@ -136,8 +148,8 @@ class LoginViewController: UIViewController {
     navigationController?.pushViewController(vc, animated: true)
   }
 
-  func alertUserLoginError() {
-    let alert = UIAlertController(title: "🚨error!", message: "please enter all information to log in", preferredStyle: .alert)
+  func alertUserLoginError(message: String = "please enter all information to log in") {
+    let alert = UIAlertController(title: "🚨error!", message: message, preferredStyle: .alert)
     alert.addAction(UIAlertAction(title: "dismiss", style: .cancel, handler: nil))
     present(alert, animated: true)
   }
