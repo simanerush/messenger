@@ -6,6 +6,26 @@
 	<string>🎞️please allow access to select a photo for your profile pic!</string>
 	<key>NSCameraUsageDescription</key>
 	<string>📸please allow access to take a profile pic!</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb542730290552308</string>
+			</array>
+		</dict>
+	</array>
+	<key>FacebookAppID</key>
+	<string>542730290552308</string>
+	<key>FacebookClientToken</key>
+	<string>908a1e501bd3300a6d3e089b9929ef5f</string>
+	<key>FacebookDisplayName</key>
+	<string>Messenger</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>fbapi</string>
+		<string>fb-messenger-share-api</string>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
