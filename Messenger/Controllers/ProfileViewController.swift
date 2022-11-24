@@ -47,7 +47,7 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
         let vc = LoginViewController()
         let nav = UINavigationController(rootViewController: vc)
         nav.modalPresentationStyle = .fullScreen
-        strongSelf.present(nav, animated: true)
+        strongSelf.present(nav, animated: false)
         
       } catch {
         print("failed to log out")
