@@ -458,6 +458,8 @@
 				DEVELOPMENT_TEAM = QJZL455652;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Messenger/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "📸please allow access to take a profile pic!";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "🎞️please allow access to select a photo for your profile pic!";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -488,6 +490,8 @@
 				DEVELOPMENT_TEAM = QJZL455652;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Messenger/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "📸please allow access to take a profile pic!";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "🎞️please allow access to select a photo for your profile pic!";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
